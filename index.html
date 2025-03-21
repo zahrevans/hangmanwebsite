@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Title</title>
+    <title>Hangman Game</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta
@@ -16,13 +16,83 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
-    <header>
-      <!-- place navbar here -->
-    </header>
-    <main></main>
+    <main class="container text-center rounded-5">
+      <!-- Game Title -->
+      <h1 class="mb-4">Shamrock Hangman</h1>
+
+      <!-- Difficulty Selection -->
+      <div id="difficultySelection" class="">
+        <h3>Select Difficulty</h3>
+        <button
+          class="btn btn-success difficulty-btn"
+          onclick="startGame('easy')"
+        >
+          Easy
+        </button>
+        <button
+          class="btn btn-warning difficulty-btn"
+          onclick="startGame('medium')"
+        >
+          Medium
+        </button>
+        <button
+          class="btn btn-danger difficulty-btn"
+          onclick="startGame('hard')"
+        >
+          Hard
+        </button>
+      </div>
+
+      <!-- Difficulty Display Box (Hidden Until Selected) -->
+      <div id="difficultyBox" class="mt-3 p-3 fw-bold d-none">
+        PLACEHOLDER TEXT
+      </div>
+
+      <!-- Game Area -->
+      <div id="gameArea" class="mt-4 d-none">
+        <!-- Word Display -->
+        <h2 id="wordDisplay" class="mb-3">_ _ _ _ _ _ _ _ _</h2>
+        <!-- Inputs for Guessing -->
+        <div>
+          <input
+            type="text"
+            id="letterInput"
+            maxlength="1"
+            class="form-control d-inline-block w-auto text-center"
+            placeholder="Guess a Letter"
+          />
+          <button id="guessBtn" class="btn btn-warning" onclick="guessLetter()">
+            Guess
+          </button>
+        </div>
+
+        <!-- Wrong Guess List -->
+        <p id="wrongLetters" class="fw-bold text-danger">Wrong Guesses:</p>
+
+        <!-- Shamrock Health Img -->
+        <img
+          src="img/shamrock6"
+          alt="Shamrock Health"
+          id="shamrock"
+          class="shamrock-img"
+        />
+
+        <!-- Restart Button -->
+        <div class="mt-4">
+          <button
+            id="restartButton"
+            class="btn btn-danger"
+            onclick="restartGame()"
+          >
+            Restart Game
+          </button>
+        </div>
+      </div>
+    </main>
     <footer>
       <!-- place footer here -->
     </footer>
@@ -38,5 +108,7 @@
       integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
       crossorigin="anonymous"
     ></script>
+    <script src="script.js"></script>
   </body>
+
 </html>
