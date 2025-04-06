@@ -60,5 +60,3 @@ function updateDifficultyDisplay(level) {
     difficultyBox.classList.add(level)
 
 }
-
-
