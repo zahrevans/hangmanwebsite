@@ -61,8 +61,3 @@ function updateDifficultyDisplay(level) {
 
 
 }
-document.getElementById('letterInput').addEventListener('keydown', (event) => {
-    if (event.key === 'Enter') {
-        guessLetter();
-    }
-});
