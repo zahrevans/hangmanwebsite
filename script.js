@@ -59,4 +59,10 @@ function updateDifficultyDisplay(level) {
     difficultyBox.textContent = `Difficulty ${level.charAt(0).toUpperCase() + level.slice(1)}`
     difficultyBox.classList.add(level)
 
+
 }
+document.getElementById('letterInput').addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') {
+        guessLetter();
+    }
+});
