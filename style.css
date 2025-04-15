@@ -1,0 +1,196 @@
+body {
+    background-color: #f1f8e9;
+    font-family: 'Roboto', 'Arial', sans-serif;
+    padding: 20px;
+    background-image: linear-gradient(to bottom, #88ff00, #3c7000);
+    min-height: 100vh;
+}
+
+h1 {
+    color: #007006;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
+    font-size: 2.8em;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.difficulty-btn {
+    margin: 10px;
+    padding: 12px 30px;
+    font-size: 1.2em;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.difficulty-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+#wordDisplay {
+    font-size: 2.8em;
+    letter-spacing: 8px;
+    margin: 30px 0;
+    color: #1b5e20;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+#letterInput {
+    font-size: 1.3em;
+    width: 150px !important;
+    margin-right: 10px;
+    text-align: center;
+    border: 2px solid #81c784;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#guessBtn {
+    padding: 10px 25px;
+    background-color: #fbc02d;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+#guessBtn:hover {
+    background-color: #f9a825;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+#wrongLetters {
+    font-size: 1.3em;
+    margin: 20px 0;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.shamrock-img {
+    max-width: 200px;
+    margin: 20px 0;
+}
+
+.easy { 
+    background-color: #c8e6c9; 
+    color: #1b5e20; 
+    border: 2px solid #81c784; 
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.medium { 
+    background-color: #fff9c4; 
+    color: #f57f17; 
+    border: 2px solid #fbc02d; 
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.hard { 
+    background-color: #ffcdd2; 
+    color: #b71c1c; 
+    border: 2px solid #e57373; 
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#difficultyBox {
+    border-radius: 10px;
+    padding: 15px !important;
+    font-size: 1.2em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.alert {
+    margin-top: 20px;
+    font-size: 1.2em;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.score-item {
+    margin: 0 15px;
+    font-size: 1.3em;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 20px;
+    display: inline-block;
+}
+
+.wins { 
+    color: #1b5e20; 
+    background-color: rgba(200, 230, 201, 0.5);
+    border: 2px solid #81c784;
+}
+
+.losses { 
+    color: #b71c1c; 
+    background-color: rgba(255, 205, 210, 0.5);
+    border: 2px solid #e57373;
+}
+
+.lives-image {
+    max-width: 220px;
+    height: auto;
+    margin: 15px auto;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+#restartBtn {
+    background-color: #e57373;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.2em;
+    border-radius: 8px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+#restartBtn:hover {
+    background-color: #c62828;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.game-container {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+#difficultySelection {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+#scoreDisplay {
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 15px;
+    padding: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
